@@ -8,3 +8,16 @@
 h1 {
     text-align: center;
 }
+
+body {
+    margin:0%
+}
+
+.container{
+    background-color: #1b1c1c;
+    padding: 20px;
+}
+.content{
+    background-color: white;
+    padding: 20px;
+}
