@@ -87,7 +87,7 @@ p:hover{
 	background-color: #f9e9e9;
 	padding-top: 40px;
 	padding-bottom: 40px;
-}
+} 
 
 #box{
 	background-color: #ddd;
@@ -129,7 +129,7 @@ li{
 
 
 
-.Occupation{
+.occupation{
 	width: 60%;
 	color: #4d4b49;
 }
