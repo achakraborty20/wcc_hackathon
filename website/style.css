@@ -126,3 +126,16 @@ li{
     overflow-y: auto;
     max-height: 150px;
 }
+
+
+
+.Occupation{
+	width: 60%;
+	color: #4d4b49;
+}
+
+
+.scroll-dropdown2{
+    overflow-y: auto;
+    max-height: 150px;
+}
