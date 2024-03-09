@@ -19,3 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
         this.size=1;
     });
 });
+
+
+function handleRaceSelection() {
+    var selectedRace = document.getElementById("dropdown").value;
+    
+    var jsonData = JSON.stringify({"race": selectedRace});
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "dataPreprocessing", true);
+    xhr.setRequestHeader("Content-Type","application/json");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
+        }
+    };
+    xhr.send(jsonData);
+}
