@@ -1,79 +1,62 @@
 <html>
-<div class="gcse-search"></div>
-
 <head>
-<link href="style.css" rel="stylesheet" />
-<script src = "script.js"></script>
-<title> Website </title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <title>Website</title>
 </head>
- 
- 
 <body>
-<div id="container">
-<h1>Website</h1>
+    <div id="container">
+        <h1>Website</h1>
 
+        <h3>Gender</h3>
+        <div id="box">
+            <h3>More Info on Data Used</h3>
+            <ul> 
+                <li><a href="https://www.census.gov/acs/www/data/eeo-data/eeo-tables-2018/tableview.php?geotype=nation&usVal=us&filetype=all11w&geoName=United%20States" style="color:  blue; font-weight: bold; text-decoration: underline;">Visit Source Link</a></li>
+            </ul>
+        </div>
 
-<h3>Who am I?</h3>
-<div id="box">
-<h3>More Info</h3>
-<ul> 
-<li>Source1</li>
-<li>Source2</li>
+        <p class="gender">
+            <select id="genderDropDown">
+                <option value="Total">Total</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+        </p>
 
-</ul>
-</div>
+        <h3>Race/Ethnicity</h3>
+        <p class="race">
+            <select id="racedropdown" class="scroll-dropdown">
+                <option value="Total">Total</option>
+                <option value="White">White</option>
+                <option value="Asian">Asian</option>
+                <option value="Hispanic or Latino">Hispanic or Latino</option>
+                <option value="Native Hawaiian /Pacific Islander">Pacific Islander</option>
+                <option value="American Indian /Alaska Native">American Indian /Alaska Native</option>
+                <option value="Black or African American">Black or African American</option>
+            </select>
+        </p>
 
+        <h3>Occupation</h3>
+        <p class="occupation">
+            <select id="occupationDropDown" class="scroll-dropdown2">
+                <option value="Childcare workers">Childcare workers</option>
+                <option value="Medical and health services managers">Medical and health services managers</option>
+                <option value="Project management specialists">Project management specialists</option>
+                <option value="Mathematical science occupations">Mathematical science occupations</option>
+                <option value="Marine engineers and naval architects">Marine engineers and naval architects</option>
+                <option value="Chemical engineers">Chemical engineers</option>
+                <option value="Computer hardware engineers">Computer hardware engineers</option>
+                <option value="Athletes, coaches, umpires, and related workers">Athletes, coaches, umpires, and related workers</option>
+                <option value="Property, real estate, and community association managers">Property, real estate, and community association managers</option>
+                <option value="Physical therapists">Physical therapists</option>
+                <option value="News analysts, reporters, and journalists">News analysts, reporters, and journalists</option>
+            </select>
+        </p>
 
-<p class="gender">
-    <select id ="dropdown1">
-        <option value="Female">Female</option>
-        <option value="Male">Male</option>
-        <option value="Total">Total</option>
-    </select>
-<p class>
- 
-
- 
-
-<h3>Race/Ethnicity</h3>
-
-<p class="race">
-    <select id ="dropdown" class ="scroll-dropdown">
-        <option value="White">White</option>
-        <option value="Asian">Asian</option>
-        <option value="Hispanic or Latino">Hispanic or Latino</option>
-        <option value="Pacific-Islander">Pacific Islander</option>
-        <option value="Native-American">Native American</option>
-        <option value="Black or African American">Black or African American</option>
-        <option value="Total">Total</option>
-    </select>
-</p>
- 
-
-
-<h3>Occupation</h3>
-<p class>
-    <p class="Occupation">
-        <select id ="dropdown2" class="scroll-dropdown2">
-            <option value="Childcare workers">Childcare workers</option>
-            <option value="Medical and health services managers">Medical and health services managers</option>
-            <option value="Project management specialists">Project management specialists</option>
-            <option value="Mathematical science occupations">Mathematical science occupations</option>
-            <option value="Marine engineers and naval architects">Marine engineers and naval architects</option>
-            <option value="Chemical engineers">Chemical engineers</option>
-            <option value="Computer hardware engineers">Computer hardware engineers</option>
-            <option value="Athletes, coaches, umpires, and related workers">Athletes, coaches, umpires, and related workers</option>
-            <option value="Property, real estate, and community association managers">Property, real estate, and community association managers</option>
-            <option value="Physical therapists">Physical therapists</option>
-            <option value="News analysts, reporters, and journalists">News analysts, reporters, and journalists</option>
-    
-        </select>
-    <p class>
-<h3>Results</h3>
-
-<p>results here </p>
-</div>
+        <h3>Results</h3>
+        <button id="fetchDataButton">Submit</button>
+        <div id="results"></div>
+    </div>
 </body>
- 
-
 </html>
