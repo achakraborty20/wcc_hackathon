@@ -102,13 +102,15 @@ p:hover{
 
 
 
-.narrow1{
+.gender{
 	width: 60%;
 	color: #4d4b49;
 
 }	
 
-.narrow2{
+
+
+.race{
 	width: 60%;
 	color: #4d4b49;
 }
@@ -117,4 +119,10 @@ p:hover{
 li{
 	font-weight:bold;
 	color:#4d4b49
+}
+
+
+.scroll-dropdown{
+    overflow-y: auto;
+    max-height: 150px;
 }
