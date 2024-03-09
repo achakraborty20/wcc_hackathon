@@ -1,6 +1,10 @@
-h1 {
+/* h1 {
     font-family: 'Courier New', Courier, monospace;
     background-color: beige;
     margin-top: 50px;
     padding: 0%;
+} */
+
+h1 {
+    text-align: center;
 }
