@@ -41,7 +41,7 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
-def getData():
+def get_data():
     selected_occupation = request.form.get('occupation')
     selected_gender = request.form.get('gender')
     selected_race = request.form.get('race')
@@ -49,18 +49,18 @@ def getData():
     percent_gender = "Percent " + selected_gender
 
     # Get percentages for the selected inputs
-    returned_percentage = data[(data['Occupation'] == selected_occupation) & (data['Gender'] == percent_gender)][selected_race] #.values[0]
+    returned_percentage = data[(data['Occupation'] == selected_occupation) & (data['Gender'] == percent_gender)][selected_race].values[0]
 
-    if (selected_gender == 'Male' | selected_gender == 'Female'):
-      gender_heading = 'Median Earnings - ' + selected_gender
+    if selected_gender in ['Male', 'Female']:  # Use 'in' instead of '|'
+        gender_heading = 'Median Earnings - ' + selected_gender
     else:
-      gender_heading = 'Median Earnings - Both Sexes'
+        gender_heading = 'Median Earnings - Both Sexes'
 
     # Get salary for the selected inputs
-    returned_salary = data[(data['Occupation'] == selected_occupation) & (data['Gender'] == gender_heading)][selected_race] #.values[0]
-
+    returned_salary = data[(data['Occupation'] == selected_occupation) & (data['Gender'] == gender_heading)][selected_race].values[0]
 
     return render_template('return.html', salary=returned_salary, percentage=returned_percentage)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
